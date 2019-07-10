@@ -1,0 +1,33 @@
+
+<view>
+  <!-- 编辑 -->
+  <view class='edit'>
+      <label class='edit_btn' bindtap='btn_edit'>{{edit_name}}</label>
+  </view>
+  <view class='footprintlist'>
+    
+    <!-- 列表 -->
+    <view url="/pages/detail/detail?hid={{item.hid}}" class='footprintitem' wx:for="{{favoriteList}}" wx:key="{{index}}" catchtap="btn_detail" data-hid='{{item.hid}}'>
+        <view class="weui-cell weui-cell_access">
+            <view class="weui-cell__hd">
+                <image src="{{img1}}" class='shoplogo'></image>
+            </view>
+            <view class="weui-cell__bd">eemb</view>
+            <text class='weui-cell__ft dele_edit' catchtap='deletes' data-hid='{{item.hid}}' style='display:{{edit_show}}'>删除</text>
+        </view>
+        <view class='itemlist'>
+            <image src='{{item.image}}'></image>
+            <view class='dedaile'>
+                <text class='title'>{{item.model}}</text>
+                <text class='detail'>{{item.detail}}</text>
+                <text class='price'>￥{{item.price}}</text>
+            </view>
+        </view>
+    </view>
+  </view>
+  <view class='nomorebox clearfix'>
+      <view class='nomoreline nomorelineleft'></view>
+      <text>没有更多了</text>
+      <view class='nomoreline nomorelineright'></view>
+  </view>
+</view>

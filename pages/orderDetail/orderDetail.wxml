@@ -1,0 +1,71 @@
+
+<view class='detailBox'>
+  <view class=' my-cells pickupUserDetail'>   
+    <image class='timg' src='/assets/timg.png'></image>
+    <view>
+      <view>
+        <text>收件人</text>
+        <text>13662271128</text>
+      </view>
+        <text>详细地址详细地址详细地址详细地址详细地址详细地址</text>
+    </view>
+  </view>
+  <view class='product'>
+    <view class=' my-cells product-top'>
+      <image src="{{img1}}" class='logo'></image>
+      <!-- <text>联系商家</text> -->
+    </view>
+    <view class='cell'>
+      <view class='product_box'>
+        <image src="{{img2}}" class='product_img'></image>
+        <view class='product_detail'>
+          <text class='title'>体积小、重量轻，以此减少电动车的重量，提高性能</text>
+          <text>型号</text>
+        </view>
+        <view class='product_price'>
+          <text class='old_price'>￥0.33</text>
+          <text class='new_price'>￥0.30</text>
+          <text class='num'>*2</text>
+        </view>
+      </view>
+      <view class='delivery-time'></view>
+      <text>最晚发货时间:5月30号23:00前</text>
+    </view>
+  </view>
+  <view class='pricedetail'>
+    <view class='my_cell'>
+      <view class="my_cell_cell">
+        <view class="my_cell_cells">
+          <text>商品实付金额</text>
+          <text>￥100.00</text>
+        </view>
+        <view class="my_cell_cells">
+          <text>快递运费:全国包邮</text>
+          <text>￥10.00</text>
+        </view>
+      </view>
+      <view class="my_cell_cell">
+        <view class="my_cell_cells">
+          <text>店铺优惠:满99减3元</text>
+          <text>￥100.00</text>
+        </view>
+      </view>
+      <view class="my_cell_cell">
+        <view class="my_cell_cells">
+          <text>实付金额:(包含运费)</text>
+          <text class='totle_price'>￥10.00</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='order my_cell'>
+    <view class="my_cell_cell">
+      <view class="my_cell_cells">
+        <text>订单编号:1234567891234</text>
+      </view>
+      <view class="my_cell_cells">
+        <text>下单时间:2019-05-03:10:25:02</text>
+      </view>
+    </view>
+  </view>
+</view>

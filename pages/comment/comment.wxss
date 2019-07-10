@@ -1,0 +1,97 @@
+.commentbox{
+  margin-top: 10rpx;
+}
+.comment_item{
+  margin-bottom: 10rpx;
+  /* display: flex;
+  justify-content: flex-start; */
+}
+.productImg{
+  height: 100rpx;
+  width: 100rpx;
+  border:1rpx solid red;
+  margin:10rpx 30rpx 30rpx;
+}
+/* 打分 */
+.grade{
+  display: flex;
+  /* justify-content: space-around; */
+  justify-content: flex-start;
+  height: 120rpx;
+  background-color: #fff;
+  line-height: 120rpx;
+  border-bottom: 1rpx solid rgb(211, 210, 210);
+}
+.grade-item{
+  width: 150rpx;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+.grade-item-box{
+  width: 100rpx;
+  height: 100rpx;
+}
+.grade .current{
+  color:red;
+}
+.flower{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 35rpx;
+  margin-right: 10rpx;
+}
+.textarea-wrp{
+  background-color: #fff;
+  padding: 0rpx 20rpx 20rpx;
+}
+.comment{
+  display: inline-block;
+  width: 700rpx;
+ 
+  background-color: #fff;
+  padding: 25rpx 10rpx 50rpx;
+  /* border: 1rpx solid #eee; */
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+}
+.addbtn-box{
+  margin-top: 30rpx;
+}
+.comment-addbtn{
+  display: inline-block;
+  width: 160rpx;
+  height:160rpx;
+  border: 1rpx dashed rgb(211, 210, 210);
+  text-align: center;
+  line-height: 160rpx;
+}
+.comment-images-box{
+   min-height: 100rpx;
+}
+.ui_uploader_item{
+  display: inline-block;
+  width: 220rpx;
+  height: 220rpx;
+  margin-right: 25rpx;
+  background-color: rgba(225,225,225,0.3);
+  position: relative;
+}
+.ui_uploader_item_icon{
+  position: absolute;
+  top:-17rpx;
+  right:-17rpx;
+  z-index: 22;
+}
+.ui_uploader_item:nth-child(3n){
+  margin-right: 0rpx;
+}
+.ui_uploader_item image{
+  width: 220rpx;
+  height: 220rpx;
+  align:middle;
+}
+.video{
+  width: 220rpx;
+  height: 220rpx;
+}

@@ -1,0 +1,120 @@
+<!-- <view class="page"> -->
+<view class='prifileheader'>
+
+  <view class='userorder '>
+    <view wx:if="{{showAvator}}" class='usercells'>
+      <open-data type="userAvatarUrl" class="avator"></open-data>
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+    </view>
+    <button wx:if="{{canIUse && !showAvator}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+    <view wx:if="{{!canIUse}}">请升级微信版本</view>
+    <!-- <view>{{userInfo.usergrade}}</view> -->
+  </view>
+
+</view>
+<view class="weui-cells weui-cells_after-title borderBox">
+  <navigator url="/pages/order/order?type=0" class="weui-cell weui-cell_access order" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+      <image src="{{img1}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </view>
+    <view class="weui-cell__bd">我的订单</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access">
+      <view style="margin-left: 5px;">查看订单详情</view>
+    </view>
+  </navigator>
+</view>
+<view class="usertodo">
+  <navigator url="/pages/order/order?type=1" class="usertodoitem">
+    <view class="box">
+      <image src="{{img2}}"></image>
+      <text>待付款</text>
+    </view>
+  </navigator>
+  <navigator url="/pages/order/order?type=2" class="usertodoitem">
+    <view class="box">
+      <image src="{{img3}}"></image>
+      <text>待发货</text>
+    </view>
+  </navigator>
+  <navigator url="/pages/order/order?type=3" class="usertodoitem">
+    <view class="box">
+      <image src="{{img4}}"></image>
+      <text>待收货</text>
+    </view>
+  </navigator>
+
+  <navigator url="/pages/order/order?type=4" class="usertodoitem">
+    <view class="box">
+      <image src="{{img5}}"></image>
+      <text>退换货</text>
+    </view>
+  </navigator>
+  <navigator url="/pages/order/order?type=5" class="usertodoitem">
+    <view class="box">
+      <image src="{{img5}}"></image>
+      <text>待评价</text>
+    </view>
+  </navigator>
+</view>
+<view class='line-width30'></view>
+<view class="weui-cells weui-cells_after-title">
+
+  <navigator url="/pages/receivecoupon/receivecoupon" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+      <image src="{{img6}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </view>
+    <view class="weui-cell__bd">领取优惠券</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="/pages/mycoupon/mycoupon" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+      <image src="{{img6}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </view>
+    <view class="weui-cell__bd">我的优惠券</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access">
+    </view>
+  </navigator>
+</view>
+<view class='line-width30'></view>
+<view class="weui-cells weui-cells_after-title">
+  <navigator url="/pages/cart/cart" class="weui-cell weui-cell_access" hover-class="weui-cell_active" open-type="switchTab">
+    <view class="weui-cell__hd">
+      <image src="{{img7}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </view>
+    <view class="weui-cell__bd">我的购物车</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access">
+      <view class="weui-badge" style="margin-left: 5px;" wx:if="{{userInfo.shopcarcount!=0}}">{{shopcarcount}}</view>
+    </view>
+  </navigator>
+  <navigator url="/pages/favorite/favorite" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+      <image src="{{img8}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </view>
+    <view class="weui-cell__bd">我的收藏夹</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access">
+      <view class="weui-badge" style="margin-left: 5px;">{{collection}}</view>
+    </view>
+  </navigator>
+</view>
+<view class='line-width30'></view>
+<view class="weui-cells weui-cells_after-title">
+
+</view>
+<view class='line-width30'></view>
+<view class="weui-cells weui-cells_after-title">
+  <navigator url="/pages/address/address" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+      <image src="{{img9}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </view>
+    <view class="weui-cell__bd">收货地址管理</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+  <navigator url="/pages/InformationSettings/InformationSettings" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+    <view class="weui-cell__hd">
+      <image src="{{img10}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+    </view>
+    <view class="weui-cell__bd">会员资料设置</view>
+    <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  </navigator>
+</view>
+<view class='line-width30'></view>

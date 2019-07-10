@@ -1,0 +1,34 @@
+<view class="coutainer">
+
+    <view class="addresslist">
+        <view class="addressItem" wx:for="{{addressList}}" wx:key="{{index}}" wx:show="{{addressList.length!=0}}">
+            <view class="addressInfo" bindtap="jumpOrder" data-id="{{item.id}}">
+                <view class="address-cells">
+                    <text class="username">{{item.name}}</text>
+                    <text>{{item.mobile}}</text>
+                </view>
+                <view>{{item.address}}</view>
+                <view>{{item.detail}}</view>
+            </view>
+            <view class="edtailBtn">
+                <view class="edtailBtnLeft">
+                    <icon wx:if="{{item.default}}" type="success" size="23" color="#ff5555" bindtap="changeaddress" data-id="{{item.id}}"></icon>
+                    <icon wx:else type="circle" size="23" bindtap="changeaddress" data-id="{{item.id}}"></icon>
+                    <text>设为默认地址</text>
+                </view>
+                <view class="edtailBtnRight">
+                    <navigator url="/pages/edtaileaddress/edtaileaddress?id={{item.id}}">
+                        <image src="{{img1}}" />
+                        <text>编辑</text>
+                    </navigator>
+                    <text bindtap="deleteaddress" data-id="{{item.id}}">删除</text>
+                </view>
+            </view>
+        </view>
+        <view style="width:100%;height:180rpx;"></view>
+    </view>
+    <navigator url="/pages/edtaileaddress/edtaileaddress?id=new" class="addAddress">
+        +添加收货地址
+    </navigator>
+
+</view>

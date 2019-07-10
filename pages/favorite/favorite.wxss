@@ -1,0 +1,89 @@
+.footprintlist {
+    margin: 0rpx 20rpx;
+    background-color:#f3f3f3;
+}
+
+.footprintitem {
+    margin-bottom: 20rpx;
+    background-color: #fff;
+    padding-left: 20rpx;
+    padding-right: 20rpx;
+    border-radius: 10rpx;
+    box-shadow: 10rpx 10rpx 10rpx #ddd
+}
+
+.shoplogo {
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 60px;
+    height: 20px;
+}
+
+.weui-cell {
+    padding-left: 0rpx;
+}
+
+.itemlist {
+    display: flex;
+    align-items: center;
+    height: 200rpx;
+}
+
+.itemlist>image {
+    width: 150rpx;
+    height: 150rpx;
+    margin-right: 20rpx;
+}
+
+.dedaile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.weui-cell {
+    border-bottom: 1rpx solid #ddd;
+}
+
+.title {
+    width: 500rpx;
+    line-height: 17px;
+    font-size: 32rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-bottom: 20rpx;
+}
+
+.price {
+    color: #ff5555;
+}
+.dele_edit{
+  width: 90rpx;
+  height: 43rpx;
+  background-color: #ff5555;
+  text-align: center;
+  line-height: 43rpx;
+  color:#fff;
+  font-size: 12px;
+  border-radius: 10px;
+}
+
+/* 编辑 */
+.edit {
+    position: relative;
+    width: 100%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background-color: #f3f3f3;
+}
+/* 编辑标题 */
+
+.edit_btn {
+    position: absolute;
+    font-size: 26rpx;
+    color: #888;
+    right: 30rpx;
+}

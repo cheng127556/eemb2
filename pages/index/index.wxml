@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<!--搜索框-->
+<include src="/includes/search-bar.wxml" />
+
+<view class="zixinche">
+    <navigator target="" url="/pages/product/product?name=Bicycle">
+        <image src="{{img1}}" class="zixinche_img" />
+    </navigator>
+</view>
+
+<view class="rexiao">
+    <image class="hot_jpg" src="{{img2}}" />
+    <text class="hot_txt">热销产品</text>
+    <text class="hot_txtall" bindtap="selectAll">查看全部</text>
+    <image class="hot_right" bindtap="selectAll" src="{{img3}}" />
+</view>
+
+<!--中部热销产品-->
+<view class="grids">
+    <navigator wx:for="{{hot}}" wx:key="" target="" url="/pages/detail/detail?hid={{item.hid}}">
+        <view class="img-box">
+            <!-- <image class="item" src="{{item.image}} " /> -->
+            <image class="hot-sell-log"  src="{{img4}}" />
+            <image class="hot-sell-img"  src="{{item.image}}" />
+           
+        </view>
+         <text class="nametxt">{{item.name}}</text>
+    </navigator>
+</view>
+<!--/中部热销产品-->
+<!--底部促销-->
+<navigator wx:for="{{product}}" wx:key="" url="/pages/product/product?name={{item.name}} ">
+    <view class="hot_img ">
+        <image src="{{item.image}} " />
+    </view>
+</navigator>
+<!--/底部促销-->

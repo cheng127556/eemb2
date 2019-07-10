@@ -1,0 +1,47 @@
+<view class='addAddress'>
+    <view class="weui-toptips weui-toptips_warn" wx:if="{{showTopTips}}">{{tipes}}</view>
+    <form bindsubmit="fromsubmit">
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">收件人</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input username" name="name" placeholder='请输入收件人' type="text" value="{{shippingAddress.name}}" />
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input weui-cell_vcode">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">联系电话</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input usertelephone " placeholder="请输入联系电话" name="mobile" type="number" value="{{shippingAddress.mobile}}" />
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">所在地区：</view>
+                </view>
+                <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" class='form-cell'>
+                    <view class="weui-input" wx:if="{{region.length>0}}">
+                        {{region[0]}}，{{region[1]}}，{{region[2]}}
+                    </view>
+                    <view class="weui-input"wx:else>
+                        请选择所在地区
+                    </view>
+                </picker>
+            </view>
+            <view class="weui-cell weui-cell_input">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">详细地址市</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input placeholder="街道楼牌号等" name="detail" type="text" class='weui-input' value="{{shippingAddress.detail}}" />
+                </view>
+            </view>
+        </view>
+        <view class="weui-btn-area">
+            <button type="warn" formType="submit" class='subbtn'>保存地址</button>
+        </view>
+    </form>
+</view>

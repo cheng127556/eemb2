@@ -1,0 +1,12 @@
+.page {
+    margin-top:20rpx;
+}
+.weui-cells:before{top:0;border-top:none}
+.weui-cells:after{bottom:0;border-bottom:none}
+.weui-select{
+  border-right: none;
+}
+.weui-cells{
+  font-size: 28rpx;
+  line-height: 50px;
+}

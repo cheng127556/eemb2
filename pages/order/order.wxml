@@ -1,0 +1,55 @@
+<!-- 头部标题 -->
+<view class="title">我的订单</view>
+<!-- 头部标题 -->
+<!-- <view class="nav-box">
+  <view class="nav-item {{ currentTab===index ? 'select' : '' }}" wx:for="{{navList}}" bindtap="selectOder" wx:key="index" data-index="{{index}}">{{item}}</view>
+
+</view> -->
+
+<scroll-view scroll-x="true" class="nav" scroll-left="{{navScrollLeft}}" scroll-with-animation="{{true}}">
+        <block wx:for="{{navData}}" wx:for-index="idx" wx:for-item="navItem" wx:key="idx">
+            <view class="nav-item {{currentTab == idx ?'select':''}}"  data-current="{{idx}}" bindtap="switchNav">{{navItem.text}}</view>
+        </block>        
+    </scroll-view>
+
+<!-- 如果订单是空的时候显示 -->
+<view wx:if="{{orderList.length == 0}}" class="content-box-empty">
+  <view class='icon-box'>
+    <image src="{{img1}}" class="empty-icon"></image>
+  </view>
+</view>
+<!-- /如果订单是空的时候显示 -->
+<view wx:else class="content-box">
+  <!-- 订单列表 -->
+  <view wx:for="{{orderList}}" wx:key="index" class='order-box'>
+    <view class='order-title'>
+      <text class='order-no' > 订单号：{{item.order_no}}</text>
+      <text class='order-state'>{{item.title}}</text>
+    </view>
+    <view wx:for="{{item.snap_items}}" wx:key="index" class='order-list-box'>
+      <view class='order-item'>
+        <navigator url="../detail/detail?hid={{item.id}}">
+           <image src="{{item.productInfo.img}}" class='order-product-img'></image>
+        </navigator>
+        <text class='order-product-name' >{{item.name}}</text>
+        <text class='order-product-text' >{{item.productInfo.specifications}}</text>
+        <text class='order-product-price'>￥{{item.productInfo.price}}</text>
+        <text class='order-product-count'>X{{item.count}}</text>
+      </view>
+    </view>
+    <view class='order-info-box'>
+     <text class='order-info'> 共{{item.snap_items.length}}个商品，实付￥ <text class='total-price'> {{item.total_price}} </text></text>
+    </view>
+    <view class='order-handle'>
+      <view   data-id="{{item.id}}" bindtap="{{item.function1}}" class="{{ (item.button2)?'cancellation':'pay' }}" wx:if="{{item.button1}}" >{{ item.button1 }}</view>
+      <view   data-id="{{item.id}}" bindtap="{{item.function2}}" class='pay' wx:if="{{item.button2}}">{{ item.button2 }}</view>
+    </view>
+  </view>
+  <!-- /订单列表 -->
+</view>
+
+<swiper class="tab-box" current="{{currentTab}}" duration="300" bindchange="switchTab">        
+  <swiper-item wx:for="{{[0,1,2,3,4,5,6,7,8]}}" wx:for-item="tabItem" wx:for-index="idx" wx:key="idx" class="tab-content">
+      {{tabItem}}
+  </swiper-item>
+</swiper>

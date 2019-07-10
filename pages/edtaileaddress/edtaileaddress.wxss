@@ -1,0 +1,7 @@
+page{
+  margin-top: 20rpx;
+}
+.weui-cells{
+  font-size: 28rpx;
+  line-height: 50px;
+}

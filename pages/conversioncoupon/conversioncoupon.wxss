@@ -1,0 +1,10 @@
+.weui-navbar {
+display:-webkit-flex;
+display:flex;
+position:absolute;
+z-index:500;
+top:0;
+width:100%;
+border-bottom:none;
+}
+

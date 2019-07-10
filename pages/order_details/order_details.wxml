@@ -1,0 +1,55 @@
+<!--pages/order_details/order_details.wxml-->
+<view class="address" bindtap='img_url' wx:if="{{address}}">
+
+    <image class='timg' src='/assets/timg.png'></image>
+    <text class='userName'>{{address.name}}</text>
+    <text class='tel'>{{address.mobile}}\n</text>
+    <text class='address_list'>{{address.country}}  {{address.province}} {{address.city}}\n {{address.detail}}\n</text>
+    <text class='tips'>收货不便时，可选择免费代收货服务</text>
+    <image class='right' src="{{img1}}"></image>
+</view>
+
+<view wx:else bindtap='img_url'>
+    <image class="add_img" src="/assets/address.png" />
+</view>
+<view class='order_detail'>
+    <view class='shop_title'>
+        <image class="img_eemb" src="{{img2}}" />
+        <text class="eemb_shop">EEMB众能动力</text>
+    </view>
+    <view class='hr'></view>
+    <view class='details' wx:for="{{list}}" wx:key="{{index}}">
+        <image class='detail_img' src='{{item.img}}' bindtap="jump_detail" />
+
+        <text class='title'>{{item.name}}</text>
+        <text class='detail' wx:if="{{item.classify==4}}">{{item.comboName}}</text>
+        <text class='price'>￥{{item.totalPrice}}</text>
+        <view class="stepper">
+            <!--减按钮  -->
+            <button class="normal2" data-obj="{{obj}}" data-index="{{index}}" bindtap="btn_minus">-</button>
+            <!-- 文本框值 -->
+            <input class="view_text_center" type="number" data-index="{{index}}" bindblur="bindManual" data-iname='input1' value="{{item.count}}" />
+
+            <button class="normal" bindtap="btn_add" data-index="{{index}}">+</button>
+        </view>
+    </view>
+    <view class='freight'>邮费 : {{freight}}</view>
+</view>
+<view class="remark">
+    <view class='span1'>
+        订单备注：<input type='text' class='remarks' value="{{remarks}}" placeholder="选填，备注信息"
+        bindinput='remarksInput'/>
+    </view>
+    <view class='span2'>
+        <text class='all_num'>共{{shopcarcount}}件</text> 小计：
+        <text class='all_price'>￥{{totalPrice}}</text>
+    </view>
+</view>
+
+<view class="high">
+
+</view>
+<view class='footer'>
+    <text class='footer_txt'>需付：<text class='all_price'>￥{{finalPrice}}</text></text>
+    <label class='submit' bindtap="btn_submit">立即支付</label>
+</view>

@@ -1,0 +1,22 @@
+.itemlist{
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+  height: 150rpx;
+  border-bottom:1rpx solid #c2c2c2;
+}
+.itemlist>image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+.dedaile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.weui-cell {
+  border-bottom:1rpx solid #c2c2c2;
+
+}

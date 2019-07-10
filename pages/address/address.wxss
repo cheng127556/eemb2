@@ -1,0 +1,67 @@
+page{
+  background-color: #fff;
+}
+.addresslist {
+  font-size: 30rpx;
+}
+.addressItem {
+    margin: 20rpx 20rpx;
+    background-color: #fff;
+    padding: 10rpx 20rpx;
+    box-shadow:  3px 3px 3px rgb(245, 242, 242),-3px 3px 3px rgb(245, 242, 242),3px -3px 3px rgb(245, 242, 242),-3px -3px 3px rgb(245, 242, 242);
+    border-radius: 10rpx;
+}
+.addressInfo >text{
+  font-size: 26rpx;
+  
+}
+.address-cells >text{
+  /* height: 60rpx;
+  line-height: 60rpx; */
+}
+.username {
+    margin-right: 20rpx;
+}
+.addressInfo {
+    border-bottom:1rpx solid #d9d9d9;
+}
+.edtailBtnRight image{
+    height: 30rpx;
+    width: 30rpx;
+}
+.edtailBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80rpx;
+}
+.edtailBtnLeft {
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+}
+.edtailBtnLeft >text{
+    margin-left: 10rpx;
+}
+.edtailBtnRight {
+    display: flex;
+    align-items: center;
+}
+.edtailBtnRight  text{
+    margin-right: 20rpx;
+}
+.edtailBtnRight image{
+    margin-right: 5rpx;
+}
+.addAddress{
+    position: fixed;
+    bottom:0rpx;
+    width: 750rpx;
+    height: 100rpx;
+    background-color: #ff5555;
+    color:#fff;
+    text-align: center;
+    line-height: 100rpx;
+    font-size: 30rpx;
+}

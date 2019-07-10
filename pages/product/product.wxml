@@ -1,0 +1,30 @@
+<!--pages/product/product.wxml-->
+<include src="/includes/search-bar.wxml" />
+<view wx:if="{{bicycle}}">
+  <view class="btn">
+    <button class="bicycleBtn1 {{ _num =='48V'?'btn2':'' }}" bindtap='btn_type' data-type="48V" data-num="48V"> 48V </button>
+    <button class="bicycleBtn1 {{ _num =='60V'?'btn2':'' }}" bindtap='btn_type' data-type="60V" data-num="60V"> 60V </button>
+    <button class="bicycleBtn1 {{ _num =='72V'?'btn2':'' }}" bindtap='btn_type' data-type="72V" data-num="72V"> 72V </button>
+    <button class="bicycleBtn1 {{ _num =='all'?'btn2':'' }}" bindtap='btn_type' data-type="all" data-num="all"> 全部 </button>
+  </view>
+</view>
+<view wx:else>
+  <view class="btn">
+    <button class="btn1 {{ _num =='CR'?'btn2':'' }}" bindtap='btn_type' data-type="CR" data-num="CR"> CR电池 </button>
+    <button class="btn1 {{ _num =='ER'?'btn2':'' }}" bindtap='btn_type' data-type="ER" data-num="ER"> ER电池 </button>
+    <button class="btn1 {{ _num =='Hot_Sale'?'btn2':'' }}" bindtap='btn_type' data-type="Hot_Sale" data-num="Hot_Sale"> Hot_Sale </button>
+  </view>
+</view>
+
+
+
+<view class="cells" wx:for="{{productList.product}}" wx:key="" data-title="{{item.name}}" data-url="/pages/detail/detail">
+  <navigator class="item" target="" url="/pages/detail/detail?hid={{item.hid}}">
+    <image class="product-img" src="{{item.image}}" mode="aspectFill" />
+    <view class="meta">
+      <text class="name">产品编号：{{item.name}}</text>
+      <text class="price">价格：{{item.price}}</text>
+      <text class="sales">销量：{{item.sales_num}}</text>
+    </view>
+  </navigator>
+</view>

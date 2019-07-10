@@ -1,0 +1,22 @@
+.couponlist image{
+  width: 712rpx;
+  height: 148rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+}
+.couponlist {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.mycoupon{
+  width: 750rpx;
+  background-color: #fff;
+  padding-left: 20rpx;
+  padding-bottom: 20rpx;
+}
+.mycoupon >text{
+  color:#ff5555;
+  border-bottom: 5rpx solid #ff5555;
+}

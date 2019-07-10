@@ -1,0 +1,95 @@
+page{
+  /* background: #fff; */
+}
+.w100{ width: 100%}
+.p_all{
+    background: #f3f3f3;
+    width: 92%;
+    padding:2% 4%;
+    color: #666;
+    font-size: 14px;
+    display: block;
+    line-height: 25px;
+}
+.p_all01{
+    width: 92%;
+    padding:4% 20rpx;
+    color: #666;
+    font-size: 14px;
+    display: block;
+    line-height: 25px;
+}
+.p_all text{
+    width: 100%;
+    display: block;
+}
+.iconWarn{
+   vertical-align:top;padding-right:2px;
+}
+
+.iconClear{
+  float:right;
+  padding-top: 5px;
+  padding-left: 10px;
+  padding-right:10px;
+  margin-top:-36px;
+  height: 28px;
+}
+
+.inputStyle{
+  padding-left: 10rpx;
+  padding-top: 10rpx;
+  border:1px solid #ddd;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.tips{
+  margin-bottom:10px;
+}
+.x_right{
+    width:16px;
+    height: 18px;
+    display:inline-block; 
+    vertical-align: middle;
+    float: right; 
+}
+.zhifu{
+    background: #fff;
+    margin-bottom: 1px;
+    padding: 4%;
+    width: 92%;
+    font-size: 14px;
+    color: #666;
+}
+.min_60{
+    min-height: 60px;
+}
+.min_30{
+  min-height: 30px;
+}
+.comment-images-box{
+  width: 750rpx;
+}
+.ui_uploader_item{
+  display: inline-block;
+  width: 220rpx;
+  height: 220rpx;
+  margin-right: 25rpx;
+  background-color: rgba(225,225,225,0.3);
+  position: relative;
+}
+.ui_uploader_item_icon{
+  position: absolute;
+  top:-17rpx;
+  right:-17rpx;
+  z-index: 22;
+}
+.ui_uploader_item:nth-child(3n){
+  margin-right: 0rpx;
+}
+.ui_uploader_item image{
+  width: 220rpx;
+  height: 220rpx;
+  align:middle;
+}

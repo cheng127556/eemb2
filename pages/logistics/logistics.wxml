@@ -1,0 +1,59 @@
+<!--pages/logistics/logistics.wxml-->
+<!--pages/demo1/demo1.wxml-->
+<view class='g_con'>
+
+    <view class='topExpress'>
+
+        <view class='topExpress-left'>
+            <image src='../../assets/timg.png' style='width:60rpx;height:60rpx;border-radius:50%;'></image>
+        </view>
+        <view class='topExpress-right'>
+            <!-- <view class='topExpress-right-top'>圆通速递</view> -->
+            <view class='topExpress-right-top'>{{company}}</view>
+            <!-- <view class='topExpress-right-middle'>运单号：813291235464788594</view> -->
+            <!-- <view class='topExpress-right-middle'>运单号：{{postid}}</view> -->
+            <view class='topExpress-right-middle'>快递单号：{{postid}}</view>
+            <view class='topExpress-right-bottom'>官方电话 95554 ></view>
+        </view>
+    </view>
+
+    <!-- 物流时间轴 -->
+    <!-- 顶部收货地址 -->
+    <view class='expressRecord'>
+
+        <view class='expressRecord-getAddress'>
+            <view class='expressRecord-top'>
+                <view class='getAddress-icon'>
+                    收
+                </view>
+                <view class='getAddress-text'>[收货地址] 广东省深圳市南山区 南山街道 亿利达大厦</view>
+            </view>
+        </view>
+        <view class='noReach-online-top-close'></view>
+        <view wx:for="{{Traces}}" wx:key="index">
+
+            <!-- 顶部收货地址半个时间轴线 -->
+
+
+            <!-- 单个物流记录点时间轴：已经过去的物流状态 -->
+            <view class='expressRecord-single-close'>
+                <view class='expressRecord-single-noReach-online-top-close'>
+                    <view class='online-top-close'></view>
+                    <view class='dot-close'></view>
+                    <view class='online-bottom'></view>
+                </view>
+                <view class='expressRecord-text'>
+                    <view class='expressRecord-status'></view>
+                    <!-- <view class='expressRecord-status-address'>武汉转运中心公司 已收入</view> -->
+                    <view class='expressRecord-status-address'>{{item.AcceptStation}}</view>
+                </view>
+
+                <view class='expressRecord-date'>
+                    <view class='expressRecord-date-time'>
+                        {{item.AcceptTime}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

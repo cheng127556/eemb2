@@ -1,0 +1,37 @@
+<view class='commentbox'>
+  <form bindsubmit='formsubmit'>
+    <view class='comment_list'>
+      <view class='comment_item' wx:for="{{list}}" wx:for-item="pItem"  wx:key="{{pItem.productId}}"  wx:for-index="pIndex">
+        <!-- 产品图片 -->
+        
+        <!-- //评论打分 -->
+        <view class='grade'>
+          <image src="{{pItem.productImg}}" class='productImg'></image>
+          <view class="grade-item" bindtap="gradebtn" wx:for="{{pItem.grades}}" wx:for-item="gItem" wx:key="{{productId}}" wx:for-index="gIndex" data-pid="{{pItem.productId}}" data-pIndex="{{pIndex}}" data-gIndex="{{gIndex}}" >
+            <image src="../../assets/tabs/flower-active.png" class="flower" wx:if="{{gItem.selected}}"></image>
+            <image src="../../assets/tabs/flower.png" class="flower" wx:else></image>
+            <text class="{{gItem.selected ===true? 'current': '' }}">{{gItem.comment}}</text>
+          </view>
+        </view>
+        <!-- //评论内容 -->
+        <view class="textarea-wrp">
+          <textarea placeholder="宝贝满足你的期待吗?说说它的有点和美中不足的地方吧" name="comment" auto-height class='comment' value="{{pItem.comment}}" bindinput="comInput" bindblur="comInput" data-pid="{{pItem.productId}}" data-pIndex="{{pIndex}}"/>
+          <!-- 上传的图片放置位置 -->
+          <view class="comment-images-box" >
+            <view class='ui_uploader_item' wx:for="{{pItem.commentimgs}}" wx:for-item="cimg" wx:key="{{index}}" wx:for-index="imgIndex">
+              <!-- 删除-->
+              <icon class='ui_uploader_item_icon' bindtap='clearImg' type="clear" size="20" data-pid="{{pItem.productId}}" data-pIndex="{{pIndex}}" data-imgIndex = "{{imgIndex}}"/>
+              <!-- 图片-->
+              <image src="{{cimg}}" bindtap='showImg' data-pIndex="{{pIndex}}" data-imgIndex = "{{imgIndex}}"></image>
+            </view>
+          </view>
+          <view class="comment-addbtn" bindtap="addPicture" data-pid="{{pItem.productId}}" data-pIndex="{{pIndex}}">添加图片</view>
+        </view>
+      </view>
+    </view>
+    <!-- 发表评论 -->
+    <view class="weui-btn-area">
+      <button class="weui-btn" type="warn" formType="submit">发表</button>
+    </view>
+  </form>
+</view>

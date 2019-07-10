@@ -1,0 +1,77 @@
+/* pages/profile/profile.wxss */
+
+.weui-cells{
+    font-size: 28rpx;
+  }
+  .navigatorbtn{
+    border:1px solid #fff;
+    width: 104rpx;
+    height: 38rpx;
+    line-height: 38rpx;
+    border-radius: 15px;
+    text-align: center;
+  }
+  .numdedail{
+    color:#fef31f;
+  }
+  .prifileheader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color:#fff;
+    background-color:#ff5555;
+    font-size: 28rpx;
+    height: 246rpx;
+  }
+  .usercells{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  .avator{
+    width: 120rpx;
+    height: 120rpx;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+  .usertodo {
+    /* padding:0rpx 20rpx; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color:#fff;
+    height: 150rpx;
+  }
+  .usertodo image{
+    width: 70rpx;
+    height: 70rpx;
+    margin-top: 20rpx;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .box text{
+    margin-top: 10rpx;
+    font-size: 28rpx;
+  }
+  
+.weui-cells:after{bottom:0;border-bottom:none;}
+.weui-cells:before{top:0;border-top:none}
+.weui-cell:before{content:" ";position:absolute;left:0;top:0;right:0;height:1px;border-top:1rpx solid #f3f3f3;color:#d9d9d9;left:15px}
+.order{
+  margin-left: 10px;
+  border-bottom: 1rpx solid #f3f3f3;
+  }
+.borderBox .weui-cell{
+  /* margin-right:10px; */
+  padding-left: 0rpx;
+}
+.weui-cell{
+  /* margin-right:10rpx; */
+}
+

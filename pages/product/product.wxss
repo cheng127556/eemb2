@@ -1,0 +1,76 @@
+    /* pages/product/product.wxss */
+    
+    .cells {
+        background-color: #fff;
+    }
+    
+    .cells .item {
+        display: flex;
+        align-items: flex-start;
+        border-bottom: 1rpx solid #eee;
+    }
+    
+    .cells .item image {
+        margin-top:40rpx; 
+        width: 160rpx;
+        height: 128rpx;
+        /* margin: 20rpx; */
+    }
+    
+    .cells .item .meta {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 10rpx 0;
+        font-size: 30rpx;
+    }
+    
+    .cells .item .meta .name {
+        color: #234;
+        font-size: 32rpx;
+    }
+    
+    .cells .item .meta .price,
+    .cells .item .meta .sales {
+        color: #678;
+        font-size: 26rpx;
+    }
+    
+    .cells .item .meta .price {
+        margin-top: 40rpx;
+    }
+    /*最上面电池样式*/
+    
+    .btn {
+        width: 100%;
+        height: 110rpx;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+    }
+    
+    .btn1 {
+        font-size: 24rpx;
+        background-color: #fff;
+        width: 28%;
+        height: 80rpx;
+        line-height: 80rpx;
+        display: flex;
+        flex-flow: row;
+        text-align: center;
+    }
+    .bicycleBtn1 {
+        font-size: 24rpx;
+        background-color: #fff;
+        width: 20%;
+        height: 80rpx;
+        line-height: 80rpx;
+        display: flex;
+        flex-flow: row;
+        text-align: center;
+    }
+    
+    .btn2 {
+        background-color: #ff9c00;
+        color: #fff;
+    }
